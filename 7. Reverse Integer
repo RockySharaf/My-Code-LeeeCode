@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int reverse(long long x) {
+        long long rem=0;
+        while(x)
+        {
+            rem=x%10+ rem*10 ;
+            x=x/10;
+            
+        }
+         if(rem<INT_MIN || rem>INT_MAX)
+             return 0;
+         else
+             return rem;
+    }
+};
